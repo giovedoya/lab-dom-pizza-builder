@@ -43,11 +43,24 @@ function renderPepperoni() {
 }
 
 function renderMushrooms() {
-  // Iteration 1: set the visibility of `<section class="mushroom">`
+  document.querySelectorAll('.mushroom').forEach((oneMush) => {
+    if (state.mushrooms) {
+      oneMush.style.visibility = 'visible';
+    } else {
+      oneMush.style.visibility = 'hidden';
+    }
+  });
 }
 
+
 function renderGreenPeppers() {
-  // Iteration 1: set the visibility of `<section class="green-pepper">`
+  document.querySelectorAll('.mushroom').forEach((onePepp) => {
+    if (state.greenPeppers) {
+      onePepp.style.visibility = 'visible';
+    } else {
+      onePepp.style.visibility = 'hidden';
+    }
+  });
 }
 
 function renderWhiteSauce() {
